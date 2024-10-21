@@ -1,32 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/output.css" />
     <title>Site IOT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&display=swap" rel="stylesheet">    <title>Document</title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&display=swap" rel="stylesheet"> <title>Document</title>
+</head>   
 
-<body class="bg-cover" style="font-family: 'Kay Pho Du' "background="background.png">
+<body class="bg-[url('/background.png')] bg-fixed bg-cover bg-no-repeat bg-center h-screen " style="font-family: 'Kay Pho Du'"">
     <div id="header"></div>
+    <div id="footer"></div>
 
+    <div class="block ">
+    <div class="md:justify-between md:flex max-md:block">
+        <div class="text-white md:flex bg-gray-800/50 backdrop-blur-[15px] mt-[5rem] p-[2em] rounded-3xl md:mx-[8rem] max-md:mx-[2rem] text-left md:items-center md:justify-between max-md:block max-md:mt-[7rem]" style="box-shadow: 0px 3px 20px rgb(0, 0, 0); ">
+           <div class="max-md:flex max-md:justify-center md:mr-[2rem]">
+            <img class="min-h-[15rem] min-w-[15rem] max-h-[30rem] rounded-[7%] " src="https://i.ibb.co/1z6WWbc/Sem-t-tulo.png" alt="">
+        </div>
+            <div>
+                <i class="text-6xl font-bold text-blue-500 ">Portfólio Pessoal</i>
+                <h1 class=" text-4xl ">Saiba mais sobre mim</h1>
+                <a>Meu nome é Murilo Giampiccolo Papa, nasci e vivo em São Paulo (capital), tenho 18 anos (10/03/2006), fiz este site com o objetivo de falar um pouco sobre mim, meus hobbies e os conteudos que tenho tido no terceiro ano do ensino médio, projetos pessoais, e até mesmo hobbies que tenho. <br></a> 
+                <a class="font-bold text-lg"><br>Hobbies:</a><a> programação, videogames, basquete, series e etc...</a>
+                <a class="font-bold text-lg"><br>Quero aprender/melhorar:</a><a> Modelagem 3d, programação e edição de video/imagem </a>
+            </div>
+            </a>
+        </div>
+        </div>
+
+        <div class=" w-screen mt-7 h-screen ">
+            <div class="justify-between flex">
+                <div class="h-[30rem] w-[50%] bg-cover bg-no-repeat bg-[url('/bookshelf.jpg')]">
+
+                </div>
+                <div class="h-[30rem] w-[50%] bg-cover bg-no-repeat bg-[url('/circuit.webp')]">
+                    <div class="text-white bg-gray-800/50 backdrop-blur-[15px] mt-[2rem] p-[2em] rounded-3xl md:mx-[2rem] max-md:mx-[2rem] text-left md:items-center md:justify-between max-md:block max-md:mt-[2rem]" style="box-shadow: 0px 3px 20px rgb(0, 0, 0)">
+                        <h1 class="text-center text-4xl font-bold text-blue-400">Projetos</h1>
+                            <h1>Ao longo do ensino médio realizei alguns projetos relacionados diretamente com o curso técnico, os que  mais me chamaram a atenção foram:</h1>
+                            <a class="font-bold text-xl ">Segue linha 1:</a> <a>Feito parcialmente para o concurso do Senac<br></a>
+                            <a class="font-bold text-xl ">Segue linha 2:</a> <a>Feito em sala como atividade do curso<br></a>
+                            <a class="font-bold text-xl ">Robo de lego:</a> <a>Feito para o concurso do Senac<br></a>
+
+                    </div>
+                    <div class="flex justify-center bg-blue-500 mt-[2rem] h-[4rem] mx-[10rem] items-center block rounded-3xl">
+                        <h1 class="text-white py-[1rem] flex text-3xl center items-center justify-center">Confira mais sobre os projetos aqui</h1> <i class="fa-solid fa-link text-white text-2xl ml-10"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        
     
 
 
     <script>
-        // Importa o header
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
             })
             .catch(error => console.error('Erro ao carregar o header:', error));
+
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar o footer:', error));
     </script>
+
+    
+<script src="script.js"></script>
 
 </body>
 
